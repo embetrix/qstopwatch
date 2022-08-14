@@ -23,6 +23,26 @@
       <height>35</height>
      </rect>
     </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton {
+    background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 #f6f7fa, stop: 1 #dadbde);
+    background-position:center;
+    background-repeat: no-repeat;
+    border: 1px solid #777;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px; 
+}
+
+QPushButton:checked {
+     background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 #e0ffc1, stop: 1 #7cfc00);
+}
+
+QPushButton:pressed {
+     background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 #e0ffc1, stop: 1 #7cfc00);
+}</string>
+    </property>
     <property name="text">
      <string>Start</string>
     </property>
@@ -35,6 +55,26 @@
       <width>90</width>
       <height>35</height>
      </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton {
+    background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 #f6f7fa, stop: 1 #dadbde);
+    background-position:center;
+    background-repeat: no-repeat;
+    border: 1px solid #777;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px; 
+}
+
+QPushButton:checked {
+     background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 #e0ffc1, stop: 1 #7cfc00);
+}
+
+QPushButton:pressed {
+     background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 #e0ffc1, stop: 1 #7cfc00);
+}</string>
     </property>
     <property name="text">
      <string>Reset</string>
