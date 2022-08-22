@@ -34,12 +34,12 @@ MainWindow::~MainWindow()
     delete watch;
 }
 
-// Triggers when the "Start"/"Pause"/"Restart" button is clicked
+// Triggers when the "Start"/"Pause"/"Resume" button is clicked
 // If the watch is running, it pauses it.
 // If the watch is not running, it resumes/starts it.
 void MainWindow::startStopTimer() {
     if(watch->isRunning()) {
-        ui->startStopButton->setText("Restart");
+        ui->startStopButton->setText("Resume");
         watch->pause();
     }
     else {
@@ -50,7 +50,7 @@ void MainWindow::startStopTimer() {
 
 // Triggers when the "Reset" button is clicked
 // Stops the watch, if it is running,
-// and resets the "Pause"/"Restart" to "Start"
+// and resets the "Pause"/"Resume" to "Start"
 void MainWindow::resetTimer() {
     ui->startStopButton->setText("Start");
     ui->hundredthsText->setText("00");
