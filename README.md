@@ -4,12 +4,12 @@ A simple stopwatch application built with Qt framework.
 
 ## Building the Project
 
-This project uses CMake and supports both Qt5 and Qt6.
+This project uses CMake and supports Qt6.
 
 ### Prerequisites
 
 - CMake 3.16 or higher
-- Qt5 or Qt6 (with Core, Gui, and Widgets modules)
+- Qt6 (with Core, Gui, and Widgets modules)
 - C++11 compatible compiler
 
 ### Build Instructions
