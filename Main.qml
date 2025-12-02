@@ -11,7 +11,6 @@ ApplicationWindow {
     
     Component.onCompleted: {
         console.log("Stopwatch object:", stopwatch)
-        console.log("Minutes:", stopwatch ? stopwatch.minutes : "null")
     }
 
     // Modern gradient background
