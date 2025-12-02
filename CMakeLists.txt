@@ -15,11 +15,19 @@ find_package(Qt6 REQUIRED COMPONENTS Core Gui Qml Quick)
 # Add the QML resource file and source files
 qt6_add_resources(QML_RESOURCES qml.qrc)
 
-add_executable(qstopwatch
+# Create executable with qt6_add_executable for better QML integration
+qt6_add_executable(qstopwatch
     main.cpp
     stopwatch.cpp
     stopwatch.h
-    ${QML_RESOURCES}
+)
+
+# Add QML files with caching enabled
+qt6_add_qml_module(qstopwatch
+    URI QStopwatch
+    VERSION 1.0
+    QML_FILES Main.qml
+    NO_RESOURCE_TARGET_PATH
 )
 
 target_link_libraries(qstopwatch PRIVATE
