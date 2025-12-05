@@ -203,7 +203,7 @@ ApplicationWindow {
                     spacing: 8
 
                     Text {
-                        text: (stopwatch && stopwatch.running) ? "■" : "▶"
+                        text: startStopBtn.text === "Pause" ? "■" : "▶"
                         font.pixelSize: 20
                         color: "white"
                         Layout.alignment: Qt.AlignVCenter
