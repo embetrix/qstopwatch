@@ -26,13 +26,14 @@ void Stopwatch::start()
 void Stopwatch::pause()
 {
     mTotalTime += mTempTime;
-    mRunning = false;
+    setRunning(false);
 }
 
 // Resumes the stopwatch.
 // Declares the watch to be running again.
 void Stopwatch::resume()
 {
+    mStartTime = QDateTime::currentDateTime();
     mRunning = true;
 }
 
@@ -101,8 +102,7 @@ QString Stopwatch::minutes() const
         return "00";
     
     qint64 time = const_cast<Stopwatch*>(this)->getTime();
-    int h = time / 1000 / 60 / 60;
-    int m = (time / 1000 / 60) - (h * 60);
+    int m = (time / 1000 / 60) % 60;
     
     return QString("%1").arg(m, 2, 10, QChar('0'));
 }
@@ -113,9 +113,7 @@ QString Stopwatch::seconds() const
         return "00";
     
     qint64 time = const_cast<Stopwatch*>(this)->getTime();
-    int h = time / 1000 / 60 / 60;
-    int m = (time / 1000 / 60) - (h * 60);
-    int s = (time / 1000) - (m * 60);
+    int s = (time / 1000) % 60;
     
     return QString("%1").arg(s, 2, 10, QChar('0'));
 }
@@ -126,11 +124,7 @@ QString Stopwatch::hundredths() const
         return "00";
     
     qint64 time = const_cast<Stopwatch*>(this)->getTime();
-    int h = time / 1000 / 60 / 60;
-    int m = (time / 1000 / 60) - (h * 60);
-    int s = (time / 1000) - (m * 60);
-    int ms = time - ( s + ( m + ( h * 60)) * 60) * 1000;
-    int ms_dis = ms / 10;
+    int ms_dis = (time / 10) % 100;
     
     return QString("%1").arg(ms_dis, 2, 10, QChar('0'));
 }
