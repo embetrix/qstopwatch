@@ -42,3 +42,9 @@ target_link_libraries(qstopwatch PRIVATE
     Qt6::Quick
 )
 
+# Installation
+install(TARGETS qstopwatch
+    RUNTIME DESTINATION bin
+    COMPONENT runtime
+)
+
